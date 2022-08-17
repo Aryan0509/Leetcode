@@ -32,13 +32,13 @@ public:
             }
         }
         
-        arr.clear();
+        vector<int>ans;
         while(!s.empty())
         {
-            arr.push_back(s.top());
+            ans.push_back(s.top());
             s.pop();
         }
-        reverse(arr.begin(),arr.end());
-        return arr;
+        reverse(ans.begin(),ans.end());
+        return ans;
     }
 };
