@@ -2,7 +2,6 @@ class Solution {
 public:
     int maxPoints(vector<vector<int>>& points) {
         int n=points.size();
-        // map<int,set<double>>m;
         if(n==1)
             return 1;
         int max=INT_MIN;
@@ -10,7 +9,7 @@ public:
         {
             int x1=points[i][0];
             int y1=points[i][1];
-            map<double,int>count; 
+            unordered_map<double,int>count; 
             for(int j=0;j<n;j++)
             {   if(j==i)continue;
                 
@@ -34,21 +33,6 @@ public:
                 }
             }
         }
-//         int max=INT_MIN;
-//         for(auto it:m)
-//         {
-//             if(it.second>max)
-//             {
-//                 max=it.second;
-//             }
-//         }
-//         max=2*max;
-        
-//         for(int i=1;i<n;i++)
-//         {
-//             if(i*(i+1)==max)
-//                 return i+1;
-//         }
         return max+1;
         
         
