@@ -1,8 +1,8 @@
 class Solution {
 public:
     bool isPossible(vector<int>& nums) {
-        map<int,int>count;
-        map<int,int>prev;
+        unordered_map<int,int>count;
+        unordered_map<int,int>prev;
         for(auto it:nums)
             count[it]++;
         
