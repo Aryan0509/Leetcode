@@ -1,34 +1,23 @@
 class Solution {
 public:
-    static bool cmp(pair<int,int>p1,pair<int,int>p2)
-    {
-        if(p1.second==p2.second)
-        {
-            return p1.first<p2.first;
-        }
-        return p1.second>p2.second;
-    }
     int minSetSize(vector<int>& arr) {
         int n=arr.size();
-        unordered_map<int,int>m;
+        map<int,int>m;
         for(int i=0;i<n;i++)
         {
             m[arr[i]]++;
         }
-        vector<pair<int,int>>p;
+        priority_queue<int>q;
         for(auto it:m)
-        {
-            p.push_back({it.first,it.second});
-        }
-        sort(p.begin(),p.end(),cmp);
-        int i=0;
+            q.push(it.second);
         int count=0;
-        while(count<n/2)
+        int i=0;
+        while(count<(n/2))
         {
-            count+=p[i].second;
-            i++;          
+            count+=q.top();
+            q.pop();
+            i++;
         }
         return i;
-        
     }
 };
