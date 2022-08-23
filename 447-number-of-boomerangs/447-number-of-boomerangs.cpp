@@ -16,7 +16,7 @@ public:
         int n=points.size();
         vector<long long>dp(100001,-1);
         long long sum=0;
-        map<double,int>m;
+        unordered_map<double,int>m;
         int x1,x2,y1,y2;
         for(int i=0;i<n;i++)
         {   
