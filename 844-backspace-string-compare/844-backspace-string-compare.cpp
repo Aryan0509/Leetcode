@@ -25,7 +25,6 @@ public:
     bool backspaceCompare(string s, string t) {
         string s1=reduce(s);
         string s2=reduce(t);
-        // cout<<s1<<" "<<s2;
         if(s1==s2)
             return true;
         return false;
