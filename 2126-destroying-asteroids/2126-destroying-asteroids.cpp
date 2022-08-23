@@ -2,7 +2,8 @@ class Solution {
 public:
     bool asteroidsDestroyed(long long mass, vector<int>& arr) {
         sort(arr.begin(),arr.end());
-        for(int i=0;i<arr.size();i++)
+        int n=arr.size();
+        for(int i=0;i<n;i++)
         {
             if(arr[i]>mass)
                 return false;
