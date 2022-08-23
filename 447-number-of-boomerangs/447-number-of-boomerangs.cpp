@@ -37,7 +37,7 @@ public:
             {
                 if(it.second>1)
                 {
-                    sum+=fact(it.second,dp)/fact(it.second-2,dp);
+                    sum+=it.second*(it.second-1);
                 }
             }
             m.clear();
