@@ -22,7 +22,6 @@ public:
         {
             days+=p[i].first;
             maxx=max(maxx,days+p[i].second);
-            // cout<<days<<" "<<maxx<<endl;
         }
             return maxx;
  
