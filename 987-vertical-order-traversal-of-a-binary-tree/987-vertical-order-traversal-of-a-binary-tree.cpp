@@ -36,8 +36,6 @@ public:
            rundfs(root->right,r+1,c+1,store); 
         }
     }
-    
-    
     vector<vector<int>> verticalTraversal(TreeNode* root) {
         vector<vector<pair<int,int>>>store(2000);
         rundfs(root,0,0,store);
@@ -52,7 +50,6 @@ public:
         {
             e++;
         }
-        // int l=e-s+1;
         e--;
         s++;
         vector<vector<pair<int,int>>>ans;
@@ -60,10 +57,6 @@ public:
         {
             ans.push_back(store[i]);
         }
-        // for(auto it:ans)
-        // {
-        //     sort(it.begin(),it.end());
-        // }
         int n=ans.size();
         for(int i=0;i<n;i++)
         {
@@ -77,7 +70,6 @@ public:
                 finalans[i].push_back(it.first);
             }
         }
-        
         return finalans;
     }
 };
