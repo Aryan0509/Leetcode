@@ -6,13 +6,13 @@ public:
         while(s<n and word[s]!='a')
             s++;
         int e=s+1;
-        map<char,int>m;
+        unordered_map<char,int>m;
         m['a']=1;
         m['e']=2;
         m['i']=3;
         m['o']=4;
         m['u']=5;
-        map<char,int>visited;
+        unordered_map<char,int>visited;
         visited['a']=0;
         visited['e']=0;
         visited['i']=0;
