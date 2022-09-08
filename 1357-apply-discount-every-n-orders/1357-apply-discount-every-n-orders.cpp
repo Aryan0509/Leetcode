@@ -2,7 +2,7 @@ class Cashier {
 public:
     int count;
     int nn;
-    map<int,int>m;
+    unordered_map<int,int>m;
     int disc;
     Cashier(int n, int discount, vector<int>& products, vector<int>& prices) {
         count=0;
