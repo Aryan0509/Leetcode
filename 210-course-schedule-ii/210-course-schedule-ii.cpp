@@ -29,7 +29,7 @@ public:
     }
     
     
-    bool iscyle(vector<vector<int>>&grid,int n)
+    bool iscycle(vector<vector<int>>&grid,int n)
     {
         vector<int>visited(n,0);
         vector<int>recst(n,0);
@@ -53,7 +53,7 @@ public:
             grid[pre[i][0]].push_back(pre[i][1]);
         }
         vector<int>ans;
-        if(iscyle(grid,n))
+        if(iscycle(grid,n))
         {
             return ans;
         }
