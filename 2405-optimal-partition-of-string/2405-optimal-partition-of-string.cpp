@@ -1,7 +1,7 @@
 class Solution {
 public:
     int partitionString(string s) {
-        map<char,int>m;
+        unordered_map<char,int>m;
         int count=1;
         for(auto it:s)
         {
