@@ -6,13 +6,13 @@ public:
         int s=0;
         int e=n-1;
         int score=0;
-        int maxs=0;
         while(s<=e)
         {
             if(power<tokens[s] and score==0)
                 return score;
             if(power<tokens[s] and score>0)
-            {   if(s==e)break;
+            {   
+                if(s==e)break;
                 score--;
                 power+=tokens[e];
                 e--;
