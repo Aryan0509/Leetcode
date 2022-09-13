@@ -26,7 +26,6 @@ public:
             x[ptr--]=n%2+'0';
             n=n/2;
         }
-        cout<<x<<endl;
         return x;
     }
     int count(vector<int>&data,int s)
@@ -69,7 +68,6 @@ public:
             else{
                 if(!check(data,i,len))
                 {
-                    cout<<"HEY"<<i<<endl;
                     return false;
                 }  
                 else {
