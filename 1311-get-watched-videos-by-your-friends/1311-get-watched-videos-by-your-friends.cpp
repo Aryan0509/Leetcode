@@ -1,6 +1,6 @@
 class Solution {
 public:
-    static bool cmp(pair<string,int>p1,pair<string,int>p2)
+    static bool cmp(pair<string,int>&p1,pair<string,int>&p2)
     {
         if(p1.second==p2.second)
         {
@@ -38,7 +38,7 @@ public:
                 
             }
         }
-        map<string,int>m;
+        unordered_map<string,int>m;
         while(q.size()>0)
         {
             int x=q.front();
