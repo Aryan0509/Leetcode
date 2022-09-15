@@ -1,31 +1,28 @@
 class Solution {
 public:
-    vector<int> findOriginalArray(vector<int>& changed) {
-        unordered_map<int,int>m;int n=changed.size();
-        if(n%2!=0) return {};
-        if(changed.size()==1 and changed[0]==0)return {};
-        for(auto it:changed)
+    vector<int> findOriginalArray(vector<int>& arr) {
+        if(arr.size()%2!=0)
+            return {};
+        unordered_map<int,int>m;
+        for(auto it:arr)
         {
             m[it]++;
         }
-        
-        sort(changed.begin(),changed.end());
-        vector<int>v;
-        for(auto it:changed)
+        sort(arr.begin(),arr.end());
+        vector<int>ans;
+        for(auto it:arr)
         {
-            if(m[it]==0)continue;
-            if(m[it]>0 and m[2*it]>0)
+            if(m[it] and m[2*it])
             {
                 m[it]--;
                 m[2*it]--;
-                // cout<<it<<" ";
-                v.push_back(it);
+                ans.push_back(it);
             }
-            else if(m[it]>0 and m[2*it]==0)
+            else if(m[it] and !m[2*it])
             {
                 return {};
             }
         }
-        return v;
+        return ans;
     }
 };
