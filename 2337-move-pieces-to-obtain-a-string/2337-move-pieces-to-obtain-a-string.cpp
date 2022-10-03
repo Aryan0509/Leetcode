@@ -34,10 +34,8 @@ public:
         int l=arr1.size();
         for(int i=0;i<l;i++)
         {
-            
                 if(arr2[i]<arr1[i])
-                    return false;
-            
+                    return false;   
         }
         return true;
         
