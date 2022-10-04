@@ -1,6 +1,6 @@
 class Solution {
 public:
-    static bool cmp(string s1,string s2)
+    static bool cmp(string &s1,string &s2)
     {
         if(stoi(s1.substr(0,2))==stoi(s2.substr(0,2)))
             return stoi(s1.substr(3,2))<stoi(s2.substr(3,2));
