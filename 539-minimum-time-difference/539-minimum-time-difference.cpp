@@ -14,18 +14,13 @@ public:
         {
             int currentmin=0;
             int ch=stoi(tp[i].substr(0,2));
-            // cout<<ch<<endl;
             int th=stoi(tp[i+1].substr(0,2));
-            // cout<<th<<endl;
             int cm=stoi(tp[i].substr(3,2));
-            // cout<<cm<<endl;
             int tm=stoi(tp[i+1].substr(3,2));
-            // cout<<tm<<endl;
             currentmin+=(th-ch)*60;
             currentmin=currentmin-cm+tm;
             mind=min(mind,currentmin);
         }
-        cout<<mind<<endl;
         int currentmin=0;
             int ch=stoi(tp[n-1].substr(0,2));
             int th=stoi(tp[0].substr(0,2));
