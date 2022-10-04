@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int calcheight(TreeNode*root, map<TreeNode*,int>&height)
+    int calcheight(TreeNode*root, unordered_map<TreeNode*,int>&height)
     {
         if(root==NULL)
         {
@@ -22,7 +22,7 @@ public:
         return height[root];
 
     }
-    TreeNode* findsub(TreeNode*root, map<TreeNode*,int>&height)
+    TreeNode* findsub(TreeNode*root, unordered_map<TreeNode*,int>&height)
     {
         if(root==NULL)
             return root;
@@ -39,7 +39,7 @@ public:
         return root;
     }
     TreeNode* subtreeWithAllDeepest(TreeNode* root) {
-        map<TreeNode*,int>height;
+        unordered_map<TreeNode*,int>height;
         int h=calcheight(root,height);
         return findsub(root,height);
     }
