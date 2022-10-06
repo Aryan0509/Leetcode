@@ -1,6 +1,6 @@
 class TimeMap {
 public:
-    map<int,map<string,string>>m;
+    unordered_map<int,map<string,string>>m;
     TimeMap() {
         m[0][""]="";
     }
