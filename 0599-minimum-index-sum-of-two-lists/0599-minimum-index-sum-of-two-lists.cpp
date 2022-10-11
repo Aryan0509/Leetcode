@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> findRestaurant(vector<string>& list1, vector<string>& list2) {
-        map<string,vector<int>>m;
+        unordered_map<string,vector<int>>m;
         for(int i=0;i<list1.size();i++)
         {
             m[list1[i]].push_back(i);
