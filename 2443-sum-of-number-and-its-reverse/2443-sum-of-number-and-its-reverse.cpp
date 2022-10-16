@@ -14,7 +14,7 @@ public:
         return x;
     }
     bool sumOfNumberAndReverse(int num) {
-        if(!num)return 1;
+        if(num==0)return 1;
         for(int i=1;i<=num;i++)
         {
             if(i+reverse(i)==num)
