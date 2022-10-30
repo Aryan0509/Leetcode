@@ -5,13 +5,12 @@ public:
         int c=0;
         for(auto it:nums)
         {
-            if(it%2==0)
+            if(it%6==0)
             {
-                if(it%3==0)
-                {
+                
                     sum+=it;
                     c++;
-                }
+                
             }
         }
         if(c==0)return 0;
