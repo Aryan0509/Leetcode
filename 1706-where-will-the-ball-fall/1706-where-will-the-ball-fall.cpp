@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-    int ispossible(vector<vector<int>>& grid,int s,int level,int n,int m)
+    int ispossible(vector<vector<int>>& grid,int s,int level,int &n,int &m)
     {
         if(level==n-1)
             return s;
@@ -9,7 +9,6 @@ public:
         {
             if(grid[level+1][s]==1)
                 return -1;
-            
         }
         if(s==0)
         {
